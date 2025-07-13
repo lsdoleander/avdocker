@@ -1,0 +1,8 @@
+
+services:
+  avd:
+    build:
+      context: .
+    ports:
+      - 3389:3389
+      - 5555:5555
