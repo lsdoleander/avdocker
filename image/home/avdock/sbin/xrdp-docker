@@ -1,0 +1,7 @@
+#!/bin/bash
+
+echo "starting xvfb (x virtual framebuffer)"
+Xvfb :1 -screen 0 1920x1080x24 > /dev/null 2>&1 &
+
+echo "starting xrdp (rdp server w/ x session management)"
+/etc/init.d/xrdp start > /dev/null 2>&1

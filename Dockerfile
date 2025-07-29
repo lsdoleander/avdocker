@@ -22,6 +22,10 @@ RUN echo "4. Cleaning up"
 RUN apt autoremove -y
 RUN apt clean
 RUN rm -rf /var/log/* /var/cache/apt/* /tmp/* /var/lib/apt/lists/*
+
+RUN adduser avdock
+RUN usermod --password avdock avdock
+
 USER avdock
 
 EXPOSE 5555
@@ -30,4 +34,4 @@ EXPOSE 22
 
 RUN echo "Dat's all Folks!"
 
-CMD /usr/sbin/xrdp-docker
+CMD /home/avdock/sbin/xrdp-docker
