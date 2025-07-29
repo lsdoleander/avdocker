@@ -15,4 +15,4 @@ ln -s $HOME/.android/avd/sdcard.img
 ln -s $HOME/.android/avd/Magisk.avd
 
 cd $IMAGEROOT
-podman build .
+podman compose build
